@@ -15,12 +15,11 @@
         class="btn btn-outline-primary btn-block"
         [class.active]="cat == selectedCategory"
         (click)="changeCategory(cat)"
-        (click)="selectedPage = 1"
       >
         {{ cat }}
       </button>
     </div>
-s
+
     <div class="col-9 p-2">
       <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
         <h4>
@@ -29,9 +28,11 @@ s
             {{ product.price | currency: 'USD':'symbol':'2.2-2' }}
           </span>
         </h4>
-        <div class="card-text bg-white p-1">{{ product.description }}
-        <button class="btn btn-success btn-sm float-right"(click)="addProductToCart(product)">Add to cart</button>
-
+        <div class="card-text bg-white p-1">
+          {{ product.description }}
+          <button class="btn btn-successs btn-sm float-right" (click)="addProductToCart(product)">
+            Add to Cart
+          </button>
         </div>
       </div>
 
